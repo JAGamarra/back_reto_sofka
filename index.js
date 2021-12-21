@@ -4,6 +4,7 @@ const cors = require("cors");
 //Importar módulos
 const DatabaseConnect = require("./database/connectionDB.js");
 const UserRouter = require("./routes/userRoutes");
+const QuestionRoutes = require("./routes/questionRoutes");
 
 class App {
   constructor() {
@@ -25,9 +26,11 @@ class App {
       res.status(200).json({ message: "All OK" });
     });
     const userRouter = new UserRouter();
+    const questionRouter = new QuestionRoutes();
 
     this.app.use(router);
     this.app.use("/api", userRouter.router);
+    this.app.use("/api", questionRouter.router);
 
     this.app.listen(this.app.get("PORT"), () => {
       console.log(

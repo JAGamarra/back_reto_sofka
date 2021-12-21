@@ -9,9 +9,9 @@ class UserRoutes {
 
   config() {
     //Crear objeto UserController
-    const userC = new UserController();
-    this.router.post("/user", userC.saveUserAndScore);
-    this.router.get("/user", userC.getUsers);
+    const userController = new UserController();
+    this.router.post("/user", userController.saveUserAndScore);
+    this.router.get("/user", userController.getUsers);
   }
 }
 

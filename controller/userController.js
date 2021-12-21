@@ -11,7 +11,7 @@ class UserController {
       });
 
       const savedUser = await user.save();
-      res.status(200).json(savedUser);
+      res.status(201).json(savedUser);
     } catch (error) {
       console.log(error);
     }
