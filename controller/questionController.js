@@ -5,12 +5,6 @@ class QuestionController {
     try {
       const questions = await Question.find();
       res.status(200).json(questions);
-
-      //   if (!questions) {
-      //     res.status(200).json([{}]);
-      //   } else {
-      //     res.status(200).json(questions);
-      //   }
     } catch (e) {
       console.error(e);
     }
