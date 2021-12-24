@@ -14,3 +14,4 @@ Se hizo el deploy de la aplicación en Heroku, por lo que no es necesario ejecut
    - https://reto-sofka-back.herokuapp.com/api/user \*
 
 Para hacer un "POST", favor seguir la misma estructura presentada del objeto (hacer una petición GET para visualizar los datos)
+Es recomendable no hacer peticiones POST para no afectar el funcionamiento del programa.
